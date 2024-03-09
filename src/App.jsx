@@ -15,6 +15,11 @@ const App = () => {
     setCount(Math.min(newCount, maxCount));
   };
 
+  const generateRandomCount = () => {
+    const randomCount = Math.floor(Math.random() * maxCount) + 1;
+    setCount(randomCount);
+  };
+
   const decreaseCount = () => setCount(Math.max(count - multiplier, 1));
 
   //const currentMineral = mineralTerms[count];
@@ -23,10 +28,11 @@ const App = () => {
     <div className="App">
       <h1>Minerals: Non-Silicate Study Guide</h1>
       <h2>Test your knowledge on how well you can identify a non-silicate mineral</h2>
+      <p>Number of Cards: 16</p>
 
       <Cards count = {count} />
 
-      
+      <button onClick={generateRandomCount}>Random</button>
       <button onClick={decreaseCount}>Previous</button>
       <button onClick={increaseCount}>Next</button>
       <p>{count}/16</p>

@@ -88,10 +88,20 @@ function getCurrentMineral(count) {
 }
 const Definition = ({count}) => {
     const currentMineral = getCurrentMineral(count);
+    const streakColor = currentMineral.streak.toLowerCase();
+    let backgroundColorClass = '';
+
+    if (streakColor === 'white') {
+        backgroundColorClass = 'white-streak';
+    } else if (streakColor === 'black') {
+        backgroundColorClass = 'black-streak';
+    } else {
+        backgroundColorClass = 'other-streak';
+    }
     
     return(
-        <div className = {'Definition '}>
-            <h4>Guess the mineral</h4>
+        <div className={`Definition ${backgroundColorClass}`}>
+            <h4>Mineral's Hardness and Streak Color</h4>
             <h5>Hardness: {currentMineral.hardness}</h5>
             <h5>Streak: {currentMineral.streak}</h5>
         </div>
