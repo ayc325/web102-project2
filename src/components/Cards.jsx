@@ -10,13 +10,15 @@ const Cards = ({ count }) => {
     };
   
     return (
-      <div className={'Cards'} onClick={toggleView}>
-        {showTerm ? (
-          <Term count={count} />
-        ) : (
-          <Definition count={count} />
-        )}
-      </div>
+        <div className='center-container'>
+            <div className={'Cards'} onClick={toggleView}>
+                {showTerm ? (
+                <Term count={count} />
+                ) : (
+                <Definition count={count} />
+                )}
+            </div>
+        </div>
     );
   };
 

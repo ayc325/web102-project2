@@ -91,11 +91,9 @@ const Definition = ({count}) => {
     
     return(
         <div className = {'Definition '}>
-            <ul>
-                <h4>Guess the mineral</h4>
-                <h5>Hardness: {currentMineral.hardness}</h5>
-                <h5>Streak: {currentMineral.streak}</h5>
-            </ul>
+            <h4>Guess the mineral</h4>
+            <h5>Hardness: {currentMineral.hardness}</h5>
+            <h5>Streak: {currentMineral.streak}</h5>
         </div>
     )
 }

@@ -90,10 +90,8 @@ const Term = ({count}) => {
 
     return(
         <div className = {'Term '}>
-            <ul>
-                <h4>{currentMineral.mineral}</h4>
-                <h5>{currentMineral.details}</h5>
-            </ul>
+            <h4>{currentMineral.mineral}</h4>
+            <h5>{currentMineral.details}</h5>
         </div>
     )
 }
